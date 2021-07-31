@@ -18,6 +18,6 @@ public class NewsDetailController {
 
     @GetMapping("/allNews")
     public List<NewsDetailDto> findAll(){
-        newsDetailService.findAll();
+     return  newsDetailService.findAll();
     }
 }
