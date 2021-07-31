@@ -1,4 +1,4 @@
-package kg.megacom.NewsBlog.models.entities;
+package kg.megacom.NewsBlog.models.dto;
 
 import kg.megacom.NewsBlog.models.enums.Lang;
 import lombok.Data;
@@ -6,11 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Entity
-@Table(name = "filters")
-public class Filter {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class FilterDto {
     private Long id;
     private String name;
     private Lang lang;

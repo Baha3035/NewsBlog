@@ -1,24 +1,20 @@
-package kg.megacom.NewsBlog.models.entities;
+package kg.megacom.NewsBlog.models.dto;
 
+import kg.megacom.NewsBlog.models.entities.Filter;
 import kg.megacom.NewsBlog.models.enums.Lang;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Data
-@Entity
-@Table(name = "news_details")
-public class NewsDetail {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class NewsDetailDto {
     private Long id;
     private String title;
     private String headerTitle;
     private String text;
-    @ManyToOne
-    @JoinColumn(name = "id_filters")
-    private Filter filter;
+    private FilterDto filterDto;
     private Date addDate;
     private Date editDate;
     private Lang lang;
