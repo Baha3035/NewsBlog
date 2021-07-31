@@ -13,6 +13,7 @@ public class Filter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Enumerated(EnumType.STRING)
     private Lang lang;
     private boolean active;
 }

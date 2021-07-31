@@ -5,10 +5,11 @@ import kg.megacom.NewsBlog.mappers.NewsDetailMapper;
 import kg.megacom.NewsBlog.models.dto.NewsDetailDto;
 import kg.megacom.NewsBlog.models.entities.NewsDetail;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
 public class NewsDetailMapperImpl implements NewsDetailMapper {
     @Autowired
     private FilterMapper filterMapper;

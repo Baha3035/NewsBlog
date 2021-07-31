@@ -21,5 +21,6 @@ public class NewsDetail {
     private Filter filter;
     private Date addDate;
     private Date editDate;
+    @Enumerated(EnumType.STRING)
     private Lang lang;
 }
