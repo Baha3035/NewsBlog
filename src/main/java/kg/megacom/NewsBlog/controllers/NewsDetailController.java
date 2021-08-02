@@ -19,8 +19,10 @@ public class NewsDetailController {
 
     @GetMapping("/allNews")
     public List<NewsDetailDto> findAll(){
+
         return newsDetailService.findAll();
     }
+
 
     @GetMapping("/news-by-langAndName")
     public List<OutputNewsDetail> findAllByFilterId(@RequestParam String lang, @RequestParam Long id){
