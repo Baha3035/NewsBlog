@@ -4,8 +4,6 @@ import kg.megacom.NewsBlog.models.entities.Filter;
 import kg.megacom.NewsBlog.models.enums.Lang;
 import lombok.Data;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Data

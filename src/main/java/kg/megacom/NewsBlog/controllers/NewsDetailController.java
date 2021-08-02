@@ -43,6 +43,10 @@ public class NewsDetailController {
     public List<OutputNewsDetail> allOutputNews(){
         return newsDetailService.findAllOutputs();
     }
-
+    @PatchMapping("/update-news")
+    public OutputNewsDetail update(@PathVariable Long id){
+//        return newsDetailService.updateOutputNews(id);
+        return null;
+    }
 
 }

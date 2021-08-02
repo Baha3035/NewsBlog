@@ -3,10 +3,12 @@ package kg.megacom.NewsBlog.services.impl;
 
 
 import kg.megacom.NewsBlog.dao.NewsDetailRepo;
+import kg.megacom.NewsBlog.exceptions.NewsNotFoundException;
 import kg.megacom.NewsBlog.mappers.NewsDetailMapper;
 import kg.megacom.NewsBlog.models.dto.ImageDto;
 import kg.megacom.NewsBlog.models.dto.NewsDetailDto;
 import kg.megacom.NewsBlog.models.enums.Lang;
+import kg.megacom.NewsBlog.models.inputNewsDetails.InputNewsDetail;
 import kg.megacom.NewsBlog.models.outputNewsDetail.OutputImages;
 import kg.megacom.NewsBlog.models.outputNewsDetail.OutputNewsDetail;
 import kg.megacom.NewsBlog.services.FilterService;
@@ -118,6 +120,21 @@ public class NewsDetailServiceImpl implements NewsDetailService {
             outputNewsDetailList.add(outputNewsDetail);
         }
         return outputNewsDetailList;
+    }
+
+    @Override
+    public OutputNewsDetail updateOutputNews(Long id, InputNewsDetail inputNewsDetail) {
+//        NewsDetailDto newsDetailDto = newsDetailMapper.toDto(newsDetailRepo.findById(id).orElseThrow(()->new NewsNotFoundException("News not found!")));
+//        newsDetailDto.setFilterDto(filterService.update(inputNewsDetail.getFilterDto()));
+//        newsDetailDto.setAddDate(inputNewsDetail.getAddDate());
+//        newsDetailDto.setEditDate(inputNewsDetail.getEditDate());
+//        newsDetailDto.setHeaderTitle(inputNewsDetail.getHeaderTitle());
+//        newsDetailDto.setLang(inputNewsDetail.getLang());
+//        newsDetailDto.setText(inputNewsDetail.getText());
+//        newsDetailDto.setTitle(inputNewsDetail.getTitle());
+//        NewsDetailDto savedNewsDetailDto = save(newsDetailDto);
+//        OutputNewsDetail outputNewsDetail = new OutputNewsDetail();
+        return null;
     }
 
     @Override
