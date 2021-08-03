@@ -23,4 +23,6 @@ public interface NewsDetailService {
     List<OutputNewsDetail> findAllOutputs();
 
     OutputNewsDetail updateOutputNews(Long id, InputNewsDetail inputNewsDetail);
+
+    NewsDetailDto findById(Long Id);
 }

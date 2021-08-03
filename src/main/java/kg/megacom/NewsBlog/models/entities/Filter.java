@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "filters")
 public class Filter {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     @Enumerated(EnumType.STRING)

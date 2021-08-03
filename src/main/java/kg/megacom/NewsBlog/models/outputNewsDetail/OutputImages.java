@@ -6,4 +6,5 @@ import lombok.Data;
 public class OutputImages {
     private String url;
     private int orderNum;
+    private Long id;
 }

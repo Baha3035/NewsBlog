@@ -1,6 +1,5 @@
 package kg.megacom.NewsBlog.models.outputNewsDetail;
 
-import kg.megacom.NewsBlog.models.dto.FilterDto;
 import kg.megacom.NewsBlog.models.enums.Lang;
 import lombok.Data;
 
@@ -16,4 +15,5 @@ public class OutputNewsDetail {
     private Date editDate;
     private Lang lang;
     private List<OutputImages> outputImages;
+    private Long newsDetailId;
 }

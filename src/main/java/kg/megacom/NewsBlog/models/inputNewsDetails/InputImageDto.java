@@ -1,5 +1,10 @@
 package kg.megacom.NewsBlog.models.inputNewsDetails;
 
-public class InputImageDto {
+import lombok.Data;
 
+@Data
+public class InputImageDto {
+private String url;
+private int orderNum;
+private Long imageId;
 }

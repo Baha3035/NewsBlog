@@ -2,6 +2,7 @@ package kg.megacom.NewsBlog.controllers;
 
 import kg.megacom.NewsBlog.models.dto.NewsDetailDto;
 import kg.megacom.NewsBlog.models.enums.Lang;
+import kg.megacom.NewsBlog.models.inputNewsDetails.InputNewsDetail;
 import kg.megacom.NewsBlog.models.outputNewsDetail.OutputNewsDetail;
 import kg.megacom.NewsBlog.services.NewsDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,9 +47,8 @@ public class NewsDetailController {
         return newsDetailService.findAllOutputs();
     }
     @PatchMapping("/update-news")
-    public OutputNewsDetail update(@PathVariable Long id){
-//        return newsDetailService.updateOutputNews(id);
-        return null;
+    public OutputNewsDetail update(@RequestParam Long id, @RequestBody InputNewsDetail inputNewsDetail){
+        return newsDetailService.updateOutputNews(id, inputNewsDetail);
     }
 
 }

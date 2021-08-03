@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "images")
 public class Image {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String url;
     @ManyToOne

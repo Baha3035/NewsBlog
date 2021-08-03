@@ -3,6 +3,7 @@ package kg.megacom.NewsBlog.controllers;
 
 import kg.megacom.NewsBlog.mappers.ImageMapper;
 import kg.megacom.NewsBlog.models.dto.ImageDto;
+import kg.megacom.NewsBlog.models.inputNewsDetails.InputImageDto;
 import kg.megacom.NewsBlog.services.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,5 +26,10 @@ public class ImageController {
     @GetMapping("/findAll")
     List<ImageDto> findAll(){
         return imageService.findAll();
+    }
+
+    @PostMapping("/update")
+    ImageDto update(@RequestParam Long id,@RequestBody InputImageDto inputImageDto){
+        return imageService.update(id, inputImageDto);
     }
 }

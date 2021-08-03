@@ -1,6 +1,5 @@
 package kg.megacom.NewsBlog.models.dto;
 
-import kg.megacom.NewsBlog.models.entities.Filter;
 import kg.megacom.NewsBlog.models.enums.Lang;
 import lombok.Data;
 
