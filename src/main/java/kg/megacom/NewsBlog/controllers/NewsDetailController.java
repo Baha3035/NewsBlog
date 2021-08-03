@@ -46,9 +46,15 @@ public class NewsDetailController {
     public List<OutputNewsDetail> allOutputNews(){
         return newsDetailService.findAllOutputs();
     }
+
     @PatchMapping("/update-news")
     public OutputNewsDetail update(@RequestParam Long id, @RequestBody InputNewsDetail inputNewsDetail){
         return newsDetailService.updateOutputNews(id, inputNewsDetail);
     }
 
+    @PatchMapping("/update-lang")
+    public NewsDetailDto updateLang(@RequestParam String lang, @RequestParam Long newsId){
+        Lang lang1 = Lang.valueOf(lang.toUpperCase(Locale.ROOT));
+        return newsDetailService.updateLang(lang1, newsId);
+    }
 }

@@ -1,11 +1,9 @@
 package kg.megacom.NewsBlog.services;
 
 import kg.megacom.NewsBlog.models.dto.NewsDetailDto;
-import kg.megacom.NewsBlog.models.entities.NewsDetail;
 import kg.megacom.NewsBlog.models.enums.Lang;
 import kg.megacom.NewsBlog.models.inputNewsDetails.InputNewsDetail;
 import kg.megacom.NewsBlog.models.outputNewsDetail.OutputNewsDetail;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -25,4 +23,6 @@ public interface NewsDetailService {
     OutputNewsDetail updateOutputNews(Long id, InputNewsDetail inputNewsDetail);
 
     NewsDetailDto findById(Long Id);
+
+    NewsDetailDto updateLang(Lang lang1, Long newsId);
 }

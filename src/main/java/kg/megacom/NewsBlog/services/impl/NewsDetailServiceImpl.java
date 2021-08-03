@@ -180,10 +180,16 @@ public class NewsDetailServiceImpl implements NewsDetailService {
     }
 
     @Override
+    public NewsDetailDto updateLang(Lang lang1, Long newsId) {
+        NewsDetailDto newsDetailDto = findById(newsId);
+        newsDetailDto.setLang(lang1);
+        return newsDetailMapper.toDto(newsDetailRepo.save(newsDetailMapper.toEntity(newsDetailDto)));
+    }
+
+    @Override
     public NewsDetailDto save(NewsDetailDto newsDetailDto) {
         FilterDto filterDto = filterService.findById(newsDetailDto.getFilterDto().getId());
         newsDetailDto.setFilterDto(filterDto);
         return newsDetailMapper.toDto(newsDetailRepo.save(newsDetailMapper.toEntity(newsDetailDto)));
     }
-
 }

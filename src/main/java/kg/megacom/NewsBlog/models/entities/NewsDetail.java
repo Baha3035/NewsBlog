@@ -1,6 +1,5 @@
 package kg.megacom.NewsBlog.models.entities;
 
-import jdk.jfr.Timestamp;
 import kg.megacom.NewsBlog.models.enums.Lang;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
